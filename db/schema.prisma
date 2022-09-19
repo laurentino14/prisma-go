@@ -1,0 +1,24 @@
+datasource db {
+    // could be postgresql or mysql
+    provider = "postgresql"
+    url      = "postgresql://postgres:dev@localhost:5432/app?schema=public"
+}
+
+generator db {
+    provider = "go run github.com/prisma/prisma-client-go"
+    // set the output folder and package name
+    output           = "./"
+    package          = "teste"
+}
+
+model User {
+    id        String   @default(uuid()) @id
+    created_at DateTime @default(now())
+    updated_at DateTime @updatedAt
+    first_name     String
+    last_name String
+    email String @unique
+    age      String?
+
+    @@map("users")
+}
