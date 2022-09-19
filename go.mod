@@ -1,14 +1,15 @@
-module github.com/laurentino14/teste
+module github.com/laurentino14/prismago
 
 go 1.19
 
-replace github.com/laurentino14/teste/teste => ./teste
 
-replace github.com/laurentino14/teste/db => ./db
+replace github.com/laurentino14/prismago/prisma => ./prisma
 
-replace github.com/laurentino14/teste/http => ./http
+replace github.com/laurentino14/prismago/db => ./db
 
-replace github.com/laurentino14/teste/http/routes => ./http/routes
+replace github.com/laurentino14/prismago/http => ./http
+
+replace github.com/laurentino14/prismago/http/routes => ./http/routes
 
 require (
 	github.com/iancoleman/strcase v0.0.0-20190422225806-e506e3ef7365

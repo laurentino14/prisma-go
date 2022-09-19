@@ -2,7 +2,7 @@ package http
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/laurentino14/teste/http/routes"
+	"github.com/laurentino14/prismago/http/routes"
 )
 
 var E = echo.New()
