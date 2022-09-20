@@ -10,6 +10,7 @@ var E = echo.New()
 func Server() {
 
 	E.GET("/list", routes.Hello)
+
 	E.POST("/create", routes.Create)
 
 	E.Start(":3131")
